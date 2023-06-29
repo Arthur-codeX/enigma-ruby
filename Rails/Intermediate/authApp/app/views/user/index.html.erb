@@ -1,0 +1,24 @@
+
+
+<h1>
+Loged In user <%= @user_id%>
+</h1>
+
+<a href="/app/cart" >
+ Items in cart are <%= @cart_items.length%>
+</a>
+
+<div class="row">
+<% @items.each do |item|%>
+
+   <div class="col">
+        <div class="card" style="width: 18rem;" >
+            <img class="card-img-top" src="<%= item.img%>" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"><%= item.name %></p>
+                <a href="/app/add-cart?id=<%= item.id%>">Add to cart</a>
+            </div>
+        </div>
+    </div>
+<%end%>
+</div>

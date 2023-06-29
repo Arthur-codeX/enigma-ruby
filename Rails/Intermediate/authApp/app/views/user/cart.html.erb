@@ -1,0 +1,14 @@
+<div class="row">
+<% @cart_items.each do |item|%>
+
+   <div class="col">
+        <div class="card" style="width: 18rem;" >
+            <img class="card-img-top" src="<%= item.img%>" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text"><%= item.name %></p>
+                <a href="/app/add-cart?id=<%= item.id%>">Add to cart</a>
+            </div>
+        </div>
+    </div>
+<%end%>
+</div>
